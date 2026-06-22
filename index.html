@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Requirements Questionnaire</title>
+
+    <!-- Marked.js for Markdown Rendering -->
+    <script src="marked.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+<h2>Project Requirements Questionnaire</h2>
+<center>A form to fully understand your needs.</center>
+
+<form id="reqForm">
+
+    <!-- SECTION 1 -->
+    <h3>1. Your Details</h3>
+
+    <label>Your Name:</label>
+    <input type="text" data-required="true">
+
+    <label>Your Role in the Business:</label>
+    <input type="text" data-required="true">
+
+    <label>Email:</label>
+    <input type="email">
+
+    <!-- SECTION 2 -->
+    <h3>2. Business Overview</h3>
+
+    <label>What does your business do?</label>
+    <textarea rows="3" placeholder="Brief business description" data-required="true"></textarea>
+
+    <label>What are the main goals you want to achieve with the new system?</label>
+    <textarea rows="3" placeholder="If unsure, describe your biggest problems instead"></textarea>
+
+    <label>Do you currently use any software?</label>
+    <select class="maybe">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure / Don’t know</option>
+    </select>
+    <div class="hintBox">If unsure, we can help evaluate what is needed.</div>
+
+    <label>If yes, what do you like or dislike about it?</label>
+    <textarea rows="3"></textarea>
+
+    <!-- SECTION 3 -->
+    <h3>3. If You Are Not Sure About Requirements</h3>
+
+    <label>How clear are you about what the system should do?</label>
+    <select class="maybe">
+        <option>I know exactly what I need</option>
+        <option>I know some things but not everything</option>
+        <option>I’m not sure yet</option>
+        <option>I need help figuring it out</option>
+    </select>
+    <div class="hintBox">No problem — we can start by understanding your workflow.</div>
+
+    <label>If you are unsure, describe problems or tasks that are slow, difficult, or could be improved.</label>
+    <textarea rows="4" placeholder="Example: too much paperwork, manual entry, slow customer service…"></textarea>
+
+    <label>Would seeing examples, demos, or sample screens help make requirements clearer?</label>
+    <select>
+        <option>Yes, that would help</option>
+        <option>No</option>
+        <option>Maybe</option>
+    </select>
+
+    <label>If you cannot explain a requirement now, how would you like to handle it?</label>
+    <select>
+        <option>Discuss later in a meeting</option>
+        <option>Decide after seeing a prototype</option>
+        <option>Create assumptions and confirm later</option>
+        <option>Not sure</option>
+    </select>
+
+    <!-- SECTION 4 -->
+    <h3>4. What Should the System Do?</h3>
+
+    <label>List tasks you want the system to perform:</label>
+    <textarea rows="4"></textarea>
+
+    <label>Are any of these tasks absolutely required?</label>
+    <textarea rows="3"></textarea>
+
+    <label>If you are unsure about tasks, choose one:</label>
+    <select class="maybe">
+        <option>I can’t list tasks yet</option>
+        <option>I know some tasks but not all</option>
+        <option>I need guidance to figure it out</option>
+    </select>
+    <div class="hintBox">We can refine tasks gradually through interviews or observation.</div>
+
+    <label>What information should the system store?</label>
+    <textarea rows="3" placeholder="Examples: customer records, product inventory, employee data"></textarea>
+
+    <label>If you don't know yet, select below:</label>
+    <select>
+        <option>Not sure yet</option>
+        <option>Will decide after discussion</option>
+        <option>Need help understanding data requirements</option>
+    </select>
+
+    <label>Should the system generate reports?</label>
+    <select>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <label>If yes, what kind of reports?</label>
+    <textarea rows="3" placeholder="Sales reports, daily summaries, performance charts…"></textarea>
+
+    <!-- SECTION 5 -->
+    <h3>5. Access & Security</h3>
+
+    <label>Should different users see different information?</label>
+    <select>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure at this time</option>
+    </select>
+
+    <label>If you don’t know yet, what would you prefer?</label>
+    <select>
+        <option>Decide later after system layout is shown</option>
+        <option>Create default access levels and we adjust later</option>
+        <option>Not sure</option>
+    </select>
+
+    <!-- SECTION 6 -->
+    <h3>6. Performance & Reliability</h3>
+
+    <label>How fast should the system respond?</label>
+    <textarea rows="2" placeholder="Example: pages should load in 5–10 seconds"></textarea>
+
+    <label>If unsure, select one:</label>
+    <select>
+        <option>Normal speed is fine</option>
+        <option>Very fast – performance is critical</option>
+        <option>Not sure yet</option>
+        <option>Will evaluate after prototype</option>
+    </select>
+
+    <!-- SECTION 7 -->
+    <h3>7. Integration With Other Systems</h3>
+
+    <label>Does the system need to connect with other software?</label>
+    <select>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure right now</option>
+    </select>
+
+    <label>If unsure, choose one:</label>
+    <select>
+        <option>We will decide during development</option>
+        <option>We'll decide after learning system capabilities</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <!-- SECTION 8 -->
+    <h3>8. Budget & Investment</h3>
+
+    <label>Do you have a budget in mind?</label>
+    <input type="text" placeholder="Optional">
+
+    <label>If uncertain, what describes your approach?</label>
+    <select>
+        <option>We will estimate budget after understanding the system</option>
+        <option>We will decide budget phase by phase</option>
+        <option>Budget is flexible</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <!-- SECTION 9 -->
+    <h3>9. Training & Support</h3>
+
+    <label>Do users need training?</label>
+    <select>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <label>Do you need ongoing support after launch?</label>
+    <select>
+        <option>Yes, regular support</option>
+        <option>Occasional support</option>
+        <option>No support needed</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <!-- SECTION 10 -->
+    <h3>10. Timeline & Priority</h3>
+
+    <label>When would you like the system to be ready?</label>
+    <textarea rows="2"></textarea>
+
+    <label>If unsure:</label>
+    <select>
+        <option>Flexible timeline</option>
+        <option>Will decide after scope is defined</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <!-- SECTION 11 -->
+    <h3>11. Future Needs</h3>
+
+    <label>Are there features you might want later?</label>
+    <textarea rows="3" placeholder="Even rough ideas are welcome"></textarea>
+
+    <label>If you can't think of future features now:</label>
+    <select>
+        <option>We will discover them during development</option>
+        <option>We will decide based on early feedback</option>
+        <option>Not sure yet</option>
+    </select>
+
+    <!-- SECTION 12 -->
+    <h3>12. Notes & Assumptions</h3>
+
+    <label>If we have to make assumptions, how should we proceed?</label>
+    <select>
+        <option>Make assumptions and confirm later</option>
+        <option>Consult me before assuming</option>
+        <option>Not sure</option>
+    </select>
+
+    <label>Any additional notes or concerns?</label>
+    <textarea rows="3"></textarea>
+
+    <button type="submit">Submit</button>
+
+    <div class="messageBox">Form submitted successfully!</div>
+    <button type="button" onclick="downloadAnswers()">Download Answers (.txt)</button>
+    <button type="button" onclick="generateAIReport()">Generate AI Report (AI Summary)</button>
+
+    <div id="aiReportBox" 
+         style="display:none; margin-top:20px; background:#fff; padding:25px; border-radius:8px; border:1px solid #ddd; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    </div>
+    <button id="downloadAIReport" 
+            style="display:none; margin-top:10px;" 
+            onclick="downloadAIReportFile()">
+    Download AI Report (.txt)
+    </button>
+    
+</form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
